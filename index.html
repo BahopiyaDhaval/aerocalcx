@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AeroCalc Pro | AeroCalcX</title>
+  <title>AeroCalcX – Smart Aero Calculator</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,8 +12,8 @@
 
   <header>
     <div class="logo">AeroCalcX</div>
-    <h1>🚀 AeroCalc Pro</h1>
-    <p>Advanced Aerodynamic & Gasdynamic Calculator</p>
+    <h1>🚀 AeroCalcX</h1>
+    <p>Smart Aerodynamic & Gasdynamic Calculator Website</p>
   </header>
 
   <main class="container">
@@ -21,13 +21,13 @@
     <section class="glass intro-card">
       <h2>About Project</h2>
       <p>
-        This website is developed as a simple engineering calculator for aerodynamic
+        This website is developed as a smart engineering calculator for aerodynamic
         and gasdynamic applications. It helps users calculate Mach Number,
         Dynamic Pressure, Reynolds Number, and Speed of Sound.
       </p>
       <p>
-        Designed for quick aerodynamic and gasdynamic calculations through a simple
-        interactive web interface.
+        Designed for quick aerodynamic and gasdynamic calculations through a simple,
+        interactive, and user-friendly web interface.
       </p>
     </section>
 
@@ -39,7 +39,11 @@
       <label for="a1">Speed of Sound (m/s)</label>
       <input type="number" id="a1" placeholder="Enter speed of sound">
 
-      <button onclick="mach()">Calculate Mach Number</button>
+      <div class="btn-group">
+        <button onclick="mach()">Calculate Mach Number</button>
+        <button class="reset-btn" onclick="resetMach()">Reset</button>
+      </div>
+
       <p id="m" class="result"></p>
     </section>
 
@@ -51,7 +55,11 @@
       <label for="v2">Velocity (m/s)</label>
       <input type="number" id="v2" placeholder="Enter velocity">
 
-      <button onclick="dp()">Calculate Dynamic Pressure</button>
+      <div class="btn-group">
+        <button onclick="dp()">Calculate Dynamic Pressure</button>
+        <button class="reset-btn" onclick="resetDP()">Reset</button>
+      </div>
+
       <p id="d" class="result"></p>
     </section>
 
@@ -69,7 +77,11 @@
       <label for="vis">Viscosity (Pa·s)</label>
       <input type="number" id="vis" placeholder="Enter viscosity">
 
-      <button onclick="re()">Calculate Reynolds Number</button>
+      <div class="btn-group">
+        <button onclick="re()">Calculate Reynolds Number</button>
+        <button class="reset-btn" onclick="resetRe()">Reset</button>
+      </div>
+
       <p id="r" class="result"></p>
     </section>
 
@@ -84,7 +96,11 @@
       <label for="t">Temperature (K)</label>
       <input type="number" id="t" placeholder="Enter temperature">
 
-      <button onclick="sound()">Calculate Speed of Sound</button>
+      <div class="btn-group">
+        <button onclick="sound()">Calculate Speed of Sound</button>
+        <button class="reset-btn" onclick="resetSound()">Reset</button>
+      </div>
+
       <p id="s" class="result"></p>
     </section>
 
@@ -102,7 +118,7 @@
 
   <footer>
     <p>Designed and Developed by <strong>Dhaval Bahopiya</strong></p>
-    <p>Brand Name: <strong>AeroCalcX</strong> | AE14 Project</p>
+    <p><strong>AeroCalcX</strong> | AE14 Internship Project</p>
   </footer>
 
   <script src="script.js"></script>

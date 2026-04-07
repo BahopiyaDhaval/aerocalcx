@@ -3,7 +3,7 @@ function mach() {
   let a = parseFloat(document.getElementById("a1").value);
 
   if (isNaN(v) || isNaN(a) || a === 0) {
-    document.getElementById("m").innerHTML = "Please enter valid values.";
+    document.getElementById("m").innerHTML = "⚠️ Enter valid values!";
     return;
   }
 
@@ -16,7 +16,7 @@ function dp() {
   let v = parseFloat(document.getElementById("v2").value);
 
   if (isNaN(d) || isNaN(v)) {
-    document.getElementById("d").innerHTML = "Please enter valid values.";
+    document.getElementById("d").innerHTML = "⚠️ Enter valid values!";
     return;
   }
 
@@ -31,7 +31,7 @@ function re() {
   let vis = parseFloat(document.getElementById("vis").value);
 
   if (isNaN(d) || isNaN(v) || isNaN(l) || isNaN(vis) || vis === 0) {
-    document.getElementById("r").innerHTML = "Please enter valid values.";
+    document.getElementById("r").innerHTML = "⚠️ Enter valid values!";
     return;
   }
 
@@ -45,10 +45,37 @@ function sound() {
   let t = parseFloat(document.getElementById("t").value);
 
   if (isNaN(g) || isNaN(R) || isNaN(t)) {
-    document.getElementById("s").innerHTML = "Please enter valid values.";
+    document.getElementById("s").innerHTML = "⚠️ Enter valid values!";
     return;
   }
 
   let result = Math.sqrt(g * R * t);
   document.getElementById("s").innerHTML = "Speed of Sound = " + result.toFixed(3) + " m/s";
+}
+
+function resetMach() {
+  document.getElementById("v1").value = "";
+  document.getElementById("a1").value = "";
+  document.getElementById("m").innerHTML = "";
+}
+
+function resetDP() {
+  document.getElementById("d1").value = "";
+  document.getElementById("v2").value = "";
+  document.getElementById("d").innerHTML = "";
+}
+
+function resetRe() {
+  document.getElementById("rd").value = "";
+  document.getElementById("rv").value = "";
+  document.getElementById("rl").value = "";
+  document.getElementById("vis").value = "";
+  document.getElementById("r").innerHTML = "";
+}
+
+function resetSound() {
+  document.getElementById("g").value = "";
+  document.getElementById("R").value = "";
+  document.getElementById("t").value = "";
+  document.getElementById("s").innerHTML = "";
 }
