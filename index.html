@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AeroCalc Pro | AeroCalcX</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="bg"></div>
+
+  <header>
+    <div class="logo">AeroCalcX</div>
+    <h1>🚀 AeroCalc Pro</h1>
+    <p>Advanced Aerodynamic & Gasdynamic Calculator</p>
+  </header>
+
+  <main class="container">
+
+    <section class="glass intro-card">
+      <h2>About Project</h2>
+      <p>
+        This website is developed as a simple engineering calculator for aerodynamic
+        and gasdynamic applications. It helps users calculate Mach Number,
+        Dynamic Pressure, Reynolds Number, and Speed of Sound.
+      </p>
+      <p>
+        Designed for quick aerodynamic and gasdynamic calculations through a simple
+        interactive web interface.
+      </p>
+    </section>
+
+    <section class="glass">
+      <h2>Mach Number Calculator</h2>
+      <label for="v1">Velocity (m/s)</label>
+      <input type="number" id="v1" placeholder="Enter velocity">
+
+      <label for="a1">Speed of Sound (m/s)</label>
+      <input type="number" id="a1" placeholder="Enter speed of sound">
+
+      <button onclick="mach()">Calculate Mach Number</button>
+      <p id="m" class="result"></p>
+    </section>
+
+    <section class="glass">
+      <h2>Dynamic Pressure Calculator</h2>
+      <label for="d1">Density (kg/m³)</label>
+      <input type="number" id="d1" placeholder="Enter density">
+
+      <label for="v2">Velocity (m/s)</label>
+      <input type="number" id="v2" placeholder="Enter velocity">
+
+      <button onclick="dp()">Calculate Dynamic Pressure</button>
+      <p id="d" class="result"></p>
+    </section>
+
+    <section class="glass">
+      <h2>Reynolds Number Calculator</h2>
+      <label for="rd">Density (kg/m³)</label>
+      <input type="number" id="rd" placeholder="Enter density">
+
+      <label for="rv">Velocity (m/s)</label>
+      <input type="number" id="rv" placeholder="Enter velocity">
+
+      <label for="rl">Characteristic Length (m)</label>
+      <input type="number" id="rl" placeholder="Enter length">
+
+      <label for="vis">Viscosity (Pa·s)</label>
+      <input type="number" id="vis" placeholder="Enter viscosity">
+
+      <button onclick="re()">Calculate Reynolds Number</button>
+      <p id="r" class="result"></p>
+    </section>
+
+    <section class="glass">
+      <h2>Speed of Sound Calculator</h2>
+      <label for="g">Gamma</label>
+      <input type="number" id="g" placeholder="Enter gamma">
+
+      <label for="R">Gas Constant (J/kg·K)</label>
+      <input type="number" id="R" placeholder="Enter gas constant">
+
+      <label for="t">Temperature (K)</label>
+      <input type="number" id="t" placeholder="Enter temperature">
+
+      <button onclick="sound()">Calculate Speed of Sound</button>
+      <p id="s" class="result"></p>
+    </section>
+
+    <section class="glass formula-card">
+      <h2>Formulas Used</h2>
+      <ul>
+        <li><strong>Mach Number:</strong> M = V / a</li>
+        <li><strong>Dynamic Pressure:</strong> q = 0.5 × ρ × V²</li>
+        <li><strong>Reynolds Number:</strong> Re = (ρ × V × L) / μ</li>
+        <li><strong>Speed of Sound:</strong> a = √(γ × R × T)</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Designed and Developed by <strong>Dhaval Bahopiya</strong></p>
+    <p>Brand Name: <strong>AeroCalcX</strong> | AE14 Project</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
